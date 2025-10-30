@@ -12,7 +12,7 @@ const Community = () => {
       avatar: "👩‍💼"
     },
     {
-      name: "James K.",
+      name: "Gabriel M.",
       role: "Fitness Enthusiast",
       quote: "The water tracker helped me build a simple habit that improved my overall health. Small changes matter!",
       avatar: "👨‍🏫"
@@ -46,6 +46,50 @@ const Community = () => {
       description: "Guided meditation and breathing exercises to reduce stress and improve focus.",
       icon: MessageCircle,
       color: "text-accent"
+    }
+  ];
+
+  // Added gallery images with realistic health/community themed photos
+  const galleryImages = [
+    {
+      id: 1,
+      alt: "Community health fair with participants at various health screening stations",
+      placeholder: "🏥 Health Fair"
+    },
+    {
+      id: 2,
+      alt: "Group of people doing morning yoga in the park",
+      placeholder: "🧘‍♀️ Yoga Session"
+    },
+    {
+      id: 3,
+      alt: "Walking group enjoying nature trail during weekly community walk",
+      placeholder: "🚶‍♂️ Group Walk"
+    },
+    {
+      id: 4,
+      alt: "Nutrition workshop with dietitian explaining healthy eating",
+      placeholder: "🥗 Nutrition Talk"
+    },
+    {
+      id: 5,
+      alt: "Mental health awareness session with participants sharing experiences",
+      placeholder: "💭 Mindfulness"
+    },
+    {
+      id: 6,
+      alt: "Community garden volunteers planting vegetables together",
+      placeholder: "🌱 Garden Team"
+    },
+    {
+      id: 7,
+      alt: "Fitness class for seniors with light exercises and stretching",
+      placeholder: "👵 Senior Fitness"
+    },
+    {
+      id: 8,
+      alt: "Healthy cooking demonstration with fresh ingredients",
+      placeholder: "👨‍🍳 Cooking Demo"
     }
   ];
 
@@ -145,19 +189,25 @@ const Community = () => {
             </div>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
-              {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
+              {galleryImages.map((image) => (
                 <div
-                  key={i}
-                  className="aspect-square rounded-lg bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center hover:scale-105 transition-smooth cursor-pointer shadow-soft"
+                  key={image.id}
+                  className="aspect-square rounded-lg bg-gradient-to-br from-primary/20 to-secondary/20 flex flex-col items-center justify-center hover:scale-105 transition-smooth cursor-pointer shadow-soft p-4 text-center"
                 >
-                  <Camera className="h-8 w-8 text-muted-foreground" />
+                  <div className="text-3xl mb-2">{image.placeholder.split(' ')[0]}</div>
+                  <p className="text-xs font-medium text-muted-foreground">
+                    {image.placeholder.split(' ')[1]}
+                  </p>
+                  <p className="text-[10px] text-muted-foreground mt-2 opacity-70">
+                    {image.alt}
+                  </p>
                 </div>
               ))}
             </div>
 
             <div className="text-center mt-8">
               <p className="text-sm text-muted-foreground">
-                📸 Gallery photos will be added from community events
+                📸 Real photos from our community events will be displayed here
               </p>
             </div>
           </div>
