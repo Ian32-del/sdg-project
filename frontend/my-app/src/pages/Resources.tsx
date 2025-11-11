@@ -6,9 +6,9 @@ import { Button } from "@/components/ui/button";
 
 const Resources = () => {
   const emergencyContacts = [
-    { service: "Emergency Services", number: "07111", icon: Phone, color: "text-destructive" },
-    { service: "Mental Health Crisis", number: "988", icon: Brain, color: "text-accent" },
-    { service: "Poison Control", number: "01111111", icon: Shield, color: "text-secondary" },
+    { service: "Emergency Services", number: "112 or 999", icon: Phone, color: "text-destructive" },
+    { service: "Mental Health Crisis", number: "1199", icon: Brain, color: "text-accent" },
+    { service: "Poison Control", number: "+254 709 770 100", icon: Shield, color: "text-secondary" },
   ];
 
   const localResources = [

@@ -42,33 +42,38 @@ const Index = () => {
       
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="gradient-hero text-white py-20 md:py-32">
-          <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center">
-              <div className="flex items-center justify-center gap-2 mb-6 animate-float">
-                <Heart className="h-12 w-12 fill-white" />
-              </div>
-              <h1 className="mb-6">Good Health & Well-being for All</h1>
-              <p className="text-xl md:text-2xl mb-8 opacity-90">
-                SDG 3 is about ensuring healthy lives and promoting well-being.
-                Start your journey to better health today—one small step at a time.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link to="/engage">
-                  <Button size="lg" variant="secondary" className="w-full sm:w-auto">
-                    Get Started
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Button>
-                </Link>
-                <Link to="/learn">
-                  <Button size="lg" variant="outline" className="w-full sm:w-auto bg-white/10 border-white/20 text-white hover:bg-white/20">
-                    Learn More
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
+        <section className="relative text-white py-20 md:py-32 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/health-banner.jpg')" }}>
+    
+    {/* Dim overlay */}
+    <div className="absolute inset-0 bg-black/50"></div>
+
+    {/* Content */}
+    <div className="relative z-10 container mx-auto px-4">
+      <div className="max-w-3xl mx-auto text-center">
+        <div className="flex items-center justify-center gap-2 mb-6 animate-float">
+          <Heart className="h-12 w-12 fill-white" />
+        </div>
+        <h1 className="mb-6">Good Health & Well-being for All</h1>
+        <p className="text-xl md:text-2xl mb-8 opacity-90">
+          SDG 3 is about ensuring healthy lives and promoting well-being.
+          Start your journey to better health today—one small step at a time.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <Link to="/engage">
+            <Button size="lg" variant="secondary" className="w-full sm:w-auto">
+              Get Started
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+          </Link>
+          <Link to="/learn">
+            <Button size="lg" variant="outline" className="w-full sm:w-auto bg-white/10 border-white/20 text-white hover:bg-white/20">
+              Learn More
+            </Button>
+          </Link>
+        </div>
+      </div>
+    </div>
+  </section>
 
         {/* Stats Section */}
         <section className="py-16 bg-muted/50">
