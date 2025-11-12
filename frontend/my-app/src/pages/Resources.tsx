@@ -13,22 +13,22 @@ const Resources = () => {
 
   const localResources = [
     {
-      name: "Community Health Center",
-      address: "123 Health St, Your City",
-      phone: "(555) 123-4567",
-      services: ["Primary Care", "Vaccinations", "Health Screenings"]
+      name: "Aga Khan University Hospital, Nairobi",
+      address: "3rd Parklands Avenue (Limuru Road), Nairobi",
+      phone: "+254 (0) 111 011 888",
+      services: ["General medicine, specialist clinics, diagnostics and tertiary care"]
     },
     {
-      name: "Mental Wellness Clinic",
-      address: "456 Wellness Ave, Your City",
-      phone: "(555) 234-5678",
-      services: ["Counseling", "Support Groups", "Crisis Intervention"]
+      name: "Kenyatta National Hospital",
+      address: "Hospital Road, Upper Hill, Nairobi",
+      phone: "020 2726300",
+      services: ["Counseling", "Support Groups", "general surgery"]
     },
     {
-      name: "Fitness & Recreation Center",
-      address: "789 Active Blvd, Your City",
-      phone: "(555) 345-6789",
-      services: ["Gym Access", "Group Classes", "Personal Training"]
+      name: "M.P. Shah Hospital",
+      address: "Shivaji Road, Nairobi, Kenya",
+      phone: "+254 707 044 115",
+      services: ["surgery", "cardiology", "oncology"]
     }
   ];
 
@@ -215,13 +215,13 @@ const Resources = () => {
                   <Button variant="outline" className="h-auto py-4">
                     <div className="text-left">
                       <div className="font-semibold">Crisis Text Line</div>
-                      <div className="text-sm text-muted-foreground">Text HOME to 741741</div>
+                      <div className="text-sm text-muted-foreground">Text HOME to +254 722 178 177</div>
                     </div>
                   </Button>
                   <Button variant="outline" className="h-auto py-4">
                     <div className="text-left">
                       <div className="font-semibold">National Suicide Prevention</div>
-                      <div className="text-sm text-muted-foreground">Call 988</div>
+                      <div className="text-sm text-muted-foreground">Call 1199</div>
                     </div>
                   </Button>
                 </div>

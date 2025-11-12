@@ -27,23 +27,23 @@ const Community = () => {
 
   const events = [
     {
-      title: "Community Health Fair",
-      date: "Every month",
-      description: "Free health screenings, nutrition workshops, and wellness activities for all ages.",
+      title: "Nairobi Walk Movement",
+      date: "Weekly group walks on Saturday mornings and Sunday afternoons in Nairobi",
+      description: "All fitness levels welcome, contact: +254 783 514107",
       icon: Users,
       color: "text-primary"
     },
     {
-      title: "Weekly Walking Group",
-      date: "Saturdays 8 AM",
+      title: "Mental Wellness Walk & Picnic",
+      date: "Saturdays 8 AM Oloolua Nature Trail, Karen Road, Nairobi.",
       description: "Join fellow community members for a refreshing morning walk in the park.",
       icon: Heart,
       color: "text-secondary"
     },
     {
-      title: "Mindfulness Sessions",
-      date: "Wednesdays 6 PM",
-      description: "Guided meditation and breathing exercises to reduce stress and improve focus.",
+      title: "World Health Expo 2025",
+      date: "Planned for December 2025 in Nairobi",
+      description: "large-scale health promotion, innovation and investment in healthcare.",
       icon: MessageCircle,
       color: "text-accent"
     }
