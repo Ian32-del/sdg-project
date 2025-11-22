@@ -10,6 +10,10 @@ import Community from "./pages/Community";
 import Resources from "./pages/Resources";
 import NotFound from "./pages/NotFound";
 import ChatBot from "@/components/ChatBot";
+import Auth from "./pages/Auth"; // 👈 Replace Login and Signup with Auth
+import ProtectedRoute from "@/components/ProtectedRoute";
+import ProtectedPages from "./ProtectedPages";
+import UserHeader from "@/components/UserHeader";
 
 const queryClient = new QueryClient();
 
@@ -19,14 +23,20 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+      <UserHeader />
         <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/learn" element={<Learn />} />
-          <Route path="/engage" element={<Engage />} />
-          <Route path="/community" element={<Community />} />
-          <Route path="/resources" element={<Resources />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
+          {/* Public routes */}
+          <Route path="/auth" element={<Auth />} /> {/* 👈 Single auth route */}
+
+          {/* Protected area */}
+          <Route
+            path="/*"
+            element={
+              <ProtectedRoute>
+                <ProtectedPages />
+              </ProtectedRoute>
+            }
+          />
         </Routes>
         <ChatBot />
       </BrowserRouter>
