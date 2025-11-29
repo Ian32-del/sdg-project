@@ -38,9 +38,9 @@ const Footer = () => {
                 <Phone className="h-4 w-4" />
                 Emergency: 911
               </a>
-              <a href="mailto:health@sdg3.org" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors">
+              <a href="mailto:gabrielmarete007@gmail.com" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors">
                 <Mail className="h-4 w-4" />
-                health@sdg3.org
+                gabrielmarete007@gmail.com
               </a>
             </div>
           </div>
