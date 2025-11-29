@@ -7,6 +7,7 @@ import { Users, MessageCircle, Camera, Heart, Upload, X, CheckCircle, XCircle, C
 import { auth, db } from "../firebase";
 import { collection, addDoc, deleteDoc, doc, query, orderBy, onSnapshot, Timestamp, updateDoc, setDoc, getDoc } from "firebase/firestore";
 import { useToast } from "@/hooks/use-toast";
+import CommunityFeed from "@/components/CommunityFeed";
 
 const Community = () => {
   const [selectedFile, setSelectedFile] = useState<any>(null);
@@ -384,37 +385,7 @@ const handleEventAttendance = async (eventId: string, status: "attend" | "not-at
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <h2 className="text-center mb-12">Community Feed</h2>
-            {posts.length === 0 ? (
-              <div className="text-center py-12">
-                <Camera className="w-16 h-16 text-gray-300 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-600 mb-2">No posts yet</h3>
-                <p className="text-gray-500">Be the first to share your health journey!</p>
-              </div>
-            ) : (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-                {posts.map((post) => (
-                  <Card key={post.id} className="overflow-hidden shadow-soft hover:shadow-hover transition-smooth relative">
-                    <div className="aspect-square bg-gray-100 relative">
-                      <img src={post.imageBase64} alt={`Community post by ${post.userEmail}`} className="w-full h-full object-cover" />
-                      {auth.currentUser?.uid === post.userId && (
-                        <button className="absolute top-2 right-2 bg-red-600 text-white rounded-full p-1" onClick={() => handleDelete(post.id)}>
-                          <X className="w-4 h-4" />
-                        </button>
-                      )}
-                    </div>
-                    <CardContent className="p-4">
-                      <div className="flex items-center justify-between">
-                        <div>
-                          <p className="text-sm font-medium text-gray-900">{post.userEmail}</p>
-                          <p className="text-xs text-muted-foreground">{post.timestamp?.toDate().toLocaleDateString()}</p>
-                        </div>
-                        
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-            )}
+            <CommunityFeed posts={posts} onPostDelete={handleDelete} />
           </div>
         </section>
 
