@@ -277,32 +277,44 @@ const handleEventAttendance = async (eventId: string, status: "attend" | "not-at
     if (fileInputRef.current) fileInputRef.current.value = '';
   };
 
+  
+
   const events = [
-    { 
-      id: "nairobi-walk",
-      title: "Nairobi Walk Movement", 
-      date: "Weekly group walks", 
-      description: "All levels welcome", 
-      icon: Users, 
-      color: "text-primary" 
-    },
-    { 
-      id: "mental-wellness",
-      title: "Mental Wellness Walk & Picnic", 
-      date: "Saturdays 8 AM", 
-      description: "Morning park walk", 
-      icon: Heart, 
-      color: "text-secondary" 
-    },
-    { 
-      id: "health-expo",
-      title: "World Health Expo 2025", 
-      date: "December 2025", 
-      description: "Health innovation event", 
-      icon: MessageCircle, 
-      color: "text-accent" 
-    },
+  { 
+    id: "nairobi-walk",
+    title: "Founders Running Club :: Nairobi", 
+    date: "Weekly group runs", 
+    description: "All levels welcome", 
+    icon: Users, 
+    color: "text-primary",
+    url: "https://www.meetup.com/founders-running-club-nairobi/events/311532308/?recId=4965207a-7a2e-47b3-b9be-6f64109d0761&recSource=event-search&searchId=87e3ad5e-ffe5-4041-8e88-2a05e40192cf&eventOrigin=find_page%24all"
+  },
+  { 
+    id: "mental-wellness",
+    title: "Michuki Park Walks", 
+    date: "Saturdays 8 , December 2025", 
+    description: "Walk in nature for mental health", 
+    icon: Heart, 
+    color: "text-secondary",
+    url: "https://www.meetup.com/african_ruby_community/events/310656917/?recId=12b18fc0-be11-4859-8db5-f666016acb3f&recSource=event-search&searchId=da35f7d2-48cf-4e5c-85f3-8f4369dd7c66&eventOrigin=find_page%24all"
+  },
+  { 
+    id: "health-expo",
+    title: "A Year-End Reflection Walk", 
+    date: "December 20, 2025", 
+    description: "Meet people who also need to touch grass", 
+    icon: MessageCircle, 
+    color: "text-accent",
+    url: "https://luma.com/clok5ckj"
+  },
   ];
+
+  
+
+
+
+
+  
 
   const testimonials = [
     { name: "Sarah M.", role: "Health Advocate", quote: "Starting my morning walk routine changed everything.", avatar: "👩‍💼" },
