@@ -291,8 +291,8 @@ const handleEventAttendance = async (eventId: string, status: "attend" | "not-at
   },
   { 
     id: "mental-wellness",
-    title: "Michuki Park Walks", 
-    date: "Saturdays 8 , December 2025", 
+    title: "We Run Nairobi ", 
+    date: "Every THUR 6AM | SAT 7:30AM", 
     description: "Walk in nature for mental health", 
     icon: Heart, 
     color: "text-secondary",
